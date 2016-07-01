@@ -1,0 +1,47 @@
+h3.titulo{
+text-align: center;
+color: white;
+
+}
+
+h1{
+  font-size: 23px !important;
+font-style: initial;
+font-family: roboto;
+}
+.polaroid{ /*marco */
+  width: 90%;
+   background-color: white;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 3% 0% 1%;
+  margin: 5%;
+
+}
+
+div.incli-izq{
+  -moz-transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+  transform: rotate(-7deg);
+}
+
+div.incli-der{
+  -moz-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+  transform: rotate(2deg);
+}
+
+.polaroid img::after{
+content: attr(alt);
+
+}
+.home-content{
+background-color: #665252;
+}
+
+.ui-grid-a img {
+    margin: auto;
+    width: 90%;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    box-shadow: 0 3px 6px rgba(0,0,0,.25);
+}
