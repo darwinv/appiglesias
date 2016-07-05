@@ -45,3 +45,23 @@ background-color: #665252;
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     box-shadow: 0 3px 6px rgba(0,0,0,.25);
 }
+
+.img-description{
+  width: 50%;
+  margin: auto;
+  border: 5px ridge #ddd;
+  border-radius: 4px;
+}
+
+.img-description img{
+  width: 100%;
+  margin: auto;
+  border-radius: 6px;
+}
+
+div.description{
+  background-color: white;
+  padding: 10%;
+  text-align: justify;
+  margin: 1%;
+}
