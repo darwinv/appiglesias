@@ -35,7 +35,8 @@ content: attr(alt);
 
 }
 .home-content{
-background-color: #665252;
+/*background-color: #665252;*/
+background-color: rgb(192, 150, 78);
 }
 
 .ui-grid-a img {
@@ -49,14 +50,13 @@ background-color: #665252;
 .img-description{
   width: 50%;
   margin: auto;
-  border: 5px ridge #ddd;
+  border: 4px solid #e4d4d4;
   border-radius: 4px;
 }
 
 .img-description img{
   width: 100%;
   margin: auto;
-  border-radius: 6px;
 }
 
 div.description{
