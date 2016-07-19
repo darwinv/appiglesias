@@ -1,0 +1,31 @@
+<div id="mapas" data-role="page" data-theme='b'>
+<div data-role="header" data-theme='b'  data-add-back-btn="true">
+<h1>Mapa</h1>
+</div>
+<script type="text/javascript">
+
+$(document).on('pageshow', '#mapas', function (e, data) {
+
+    setTimeout(function () {
+        // This is the minimum zoom level that we'll allow
+        var minZoomLevel = 12;
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: minZoomLevel,
+            center: new google.maps.LatLng(7.765005, -72.235351),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+    }, 1);
+});
+
+</script>
+<div data-role="content" id="contenido">
+   <div id="map" style="height: 100%;"></div>
+</div>
+<div data-theme="b" data-role="footer" data-position="fixed">
+            <h3>
+                Mapa
+            </h3>
+        </div>
+
+</div>

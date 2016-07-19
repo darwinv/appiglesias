@@ -65,3 +65,21 @@ div.description{
   text-align: justify;
   margin: 1%;
 }
+
+.ui-icon-custom:after {
+    background-image: url("../custom-icons/globe.png");
+    background-position: 3px 3px;
+    background-size: 70%;
+}
+
+
+#contenido{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    position : absolute !important;
+    top : 40px !important;
+    right : 0;
+    bottom : 40px !important;
+    left : 0 !important;
+}

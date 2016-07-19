@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="css/styles.css" />
     <script src='js/jquery.min.js'></script>
     <script src='js/jquery.mobile-1.4.5.min.js'></script>
+    <script>
+           $(document).on("mobileinit", function() {
+               $.mobile.toolbar.prototype.options.addBackBtn = true;
+               $.mobile.toolbar.prototype.options.backBtnText = "Volver";
+           });
+       </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG8PwrVPA2llwolh7KtXPqTIwhowcJm-g">
+    </script>
+
   </head>
   <body>
     <!-- Main Page -->
