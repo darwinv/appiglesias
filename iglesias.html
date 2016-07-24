@@ -4,21 +4,26 @@
 <h1>Iglesias</h1>
 <a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-l" class="ui-alt-icon ui-nodisc-icon" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
 </div>
+
 <div data-role="content" class="home-content">
 
   <ul data-role="listview" data-split-icon="custom" data-filter="true" data-filter-placeholder="Buscar Iglesias..."  data-inset="true">
    <!-- Iglesias de San Cristobal -->
-      <li><a href="descripciones/catedral-sancristobal.html">
+      <li>
+        <a href="descripciones/catedral-sancristobal.html">
           <img src="imgs/th-catedral-sancristobal.jpg">
       <h3>Catedral de San Cristobal</h3>
       <p>San Cristobal</p></a>
-      <a href="mapa/map-catedral-sancristobal.html"></a>
+      <a href="mapa/map-iglesias.html?latitud=7.765005&longitud=-72.235351">
+      </a>
       </li>
-      <li><a href="descripciones/iglesia-sanjose.html">
+
+      <li class="lista-iglesias" data-lat="7.767333" data-lng="-72.230222" >
+      <a href="descripciones/iglesia-sanjose.html">
           <img src="imgs/th-igl-sanjose.jpg">
       <h3>Iglesia San Jose</h3>
       <p>San Cristobal</p></a>
-      <a href="#"></a>
+      <a href="mapa/map-iglesias.html?latitud=7.767333&longitud=-72.230222"></a>
       </li>
       <li><a href="descripciones/sanjuan-bautista.html">
           <img src="imgs/th-igl-sanjuanbautista3.jpg">
@@ -59,42 +64,42 @@
       <a href="#"></a>
       </li>
       <!-- Iglesias Rubio -->
-      <li><a href="#">
+      <li><a href="descripciones/igl-rubio.html">
           <img src="imgs/th-igl-stabarbara.jpg">
       <h3>Iglesia Santa Bárbara</h3>
       <p>Rubio</p></a>
       <a href="#"></a>
       </li>
 
-      <li><a href="#">
+      <li><a href="descripciones/igl-sanantonio.html">
           <img src="imgs/th-igl-sanantoniodepadua.jpg">
       <h3>Iglesia San Antonio de Padua</h3>
       <p>San Antonio del Táchira</p></a>
       <a href="#"></a>
       </li>
 
-      <li><a href="#">
+      <li><a href="descripciones/igl-sanagaton.html">
           <img src="imgs/th-igl-sanagaton.jpg">
       <h3>Iglesia San Agatón</h3>
       <p>Palmira</p></a>
       <a href="#"></a>
       </li>
 
-      <li><a href="#">
+      <li><a href="descripciones/igl-sanpedroapostol.html">
           <img src="imgs/th-igl-sanpedroapostol.jpg">
       <h3>Iglesia San Pedro Apóstol</h3>
       <p>Capacho Nuevo</p></a>
       <a href="#"></a>
       </li>
 
-      <li><a href="#">
+      <li><a href="descripciones/igl-seboruco.html">
           <img src="imgs/th-igl-sanpedroseboruco.jpg">
-      <h3>Iglesia San Pedro de Seboruco</h3>
+      <h3>Nuestra Señora del Rosario de Chiquinquirá</h3>
       <p>Seboruco</p></a>
       <a href="#"></a>
       </li>
 
-      <li><a href="#">
+      <li><a href="descripciones/igl-lobatera.html">
           <img src="imgs/th-igl-lobatera.jpg">
       <h3>Iglesia de Nuestra Señora del Rosario de Chiquinquirá</h3>
       <p>Lobatera</p></a>
@@ -155,6 +160,14 @@ data-theme="b">Go Back</a>
 
 
 </div>
+<script>
+// $(document).on('pagebeforeshow', "#mapas",function () {
+//            var parameters = $(this).data("url").split("?")[1];
+//            parameter = parameters.replace("paremeter=","");
+//            alert(parameter);
+//        });
+</script>
+
 <div data-role="footer" data-theme='b'>
 <h4>Visitalas</h4>
 </div>
