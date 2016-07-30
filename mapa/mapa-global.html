@@ -1,0 +1,78 @@
+<div id="mapa-global" data-role="page" data-theme='b'>
+<div data-role="header" data-theme='b'  data-add-back-btn="true">
+<h1>Mapa Global</h1>
+</div>
+<script type="text/javascript">
+
+$(document).on('pageshow', '#mapa-global', function (e, data) {
+  //console.log(latitud);
+  //console.log(longitud);
+
+    setTimeout(function () {
+        // This is the minimum zoom level that we'll allow
+        var minZoomLevel = 8;
+
+        var iglesias = [
+      ['Catedral de San Cristobal', 7.765005, -72.235351],
+      ['Iglesia San Jose - San Cristobal', 7.767333, -72.230222],
+      ['Iglesia San Juan Bautista', 7.773194, -72.230222],
+      ['Nuestra señora del perpetuo socorro', 7.771750, -72.227556],
+      ['Basilica de Nuestra Señora de la Consolación de Táriba', 7.817833, -72.226500],
+      ['Basilica del Espíritu Santo', 8.136861, -71.986389],
+      ['Iglesia Nuestra Señora de los Ángeles', 8.135306, -71.984444],
+      ['Iglesia Santa Barbara', 7.705722, -72.358917],
+      ['Iglesia San Antonio de Padua', 7.812944, -72.446472],
+      ['Iglesia San Agatón', 7.838306, -72.228333],
+      ['Iglesia San Pedro Apóstol', 7.823917, -72.306639],
+      ['Iglesia San Pedro de Seboruco', 8.145295, -72.072939],
+      ['Iglesia de Nuestra Señora del Rosario de Chiquinquirá', 7.930528, -72.247389],
+      ['Iglesia nuestra señora del Carmen', 7.831972, -72.284778],
+      ['Iglesia San Bartolomé de Vargas', 8.034833, -72.057639],
+      ['Iglesia San Jose - San José de Bolívar', 7.911611, -71.973417],
+      ['Iglesia San Emigdio', 7.822572, -72.321978],
+      ['Iglesia San Jose-Delicias', 7.564944, -72.448083]
+    ];
+
+    var image ='../imgs/church-icon.png';
+
+
+
+ //var LatLngDelicias = {lat: 7.564944, lng: -72.448083}; //Delicias
+
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: minZoomLevel,
+            center: new google.maps.LatLng(8.1084039, -71.7178412),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        for (var i = 0; i < iglesias.length; i++) {
+
+            var iglesia = iglesias[i];
+
+          var marker = new google.maps.Marker({
+              position: {lat: iglesia[1], lng: iglesia[2]},
+              map: map,
+              icon: image,
+              title: iglesia[0]
+            });
+          }
+
+
+    }, 1);
+
+
+
+});
+
+</script>
+<div data-role="content" id="contenido">
+   <div id="map" style="height: 100%;"></div>
+</div>
+<div data-theme="b" data-role="footer" data-position="fixed">
+            <h3>
+                Mapa
+            </h3>
+        </div>
+
+</div>

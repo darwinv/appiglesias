@@ -36,7 +36,7 @@ content: attr(alt);
 }
 .home-content{
 /*background-color: #665252;*/
-background-color: rgb(192, 150, 78);
+background-color: rgba(195, 150, 73, 0.77);
 }
 
 .ui-grid-a img {
