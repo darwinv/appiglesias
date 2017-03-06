@@ -4,6 +4,10 @@ color: rgba(121, 85, 72, 0.97);
 
 }
 
+h3.titulo2{
+  text-align: center;
+}
+
 h1{
   font-size: 23px !important;
 font-style: initial;
@@ -30,6 +34,12 @@ div.incli-der{
   transform: rotate(2deg);
 }
 
+#id_cabecera_login{
+    right: unset;
+}
+.right{
+ float:right;
+}
 .polaroid img::after{
 content: attr(alt);
 
@@ -87,3 +97,72 @@ div.description{
     bottom : 40px !important;
     left : 0 !important;
 }
+
+.checkboxWidth{
+    margin: 0px !important;
+    
+}
+
+.split-custom-wrapper {
+    /* position wrapper on the right of the listitem */
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.split-custom-button {
+    position: relative;
+    float: right;   /* allow multiple links stacked on the right */
+    height: 40%;
+    margin:0;
+    min-width:3em;
+    /* remove boxshadow and border */
+    border:none;
+    moz-border-radius: 0;
+    webkit-border-radius: 0;
+    border-radius: 0;
+    moz-box-shadow: none;
+    webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.split-custom-button span.ui-btn-inner {
+    /* position icons in center of listitem*/
+    position: relative;
+    margin-top:50%;
+    margin-left:50%;
+    /* compensation for icon dimensions */
+    top:11px; 
+    left:-12px;
+    height:40%; /* stay within boundaries of list item */
+}
+
+
+/*   Estilos de prueba 
+
+.split-button-custom {
+    float: right;
+    margin-right: 10px;
+    margin-top: -32px;
+    border-bottom-left-radius: 1em 1em;
+    border-bottom-right-radius: 1em 1em;
+    border-top-left-radius: 1em 1em;
+    border-top-right-radius: 1em 1em;   
+}
+
+.split-button-custom span.ui-btn-inner {
+    border-bottom-left-radius: 1em 1em;
+    border-bottom-right-radius: 1em 1em;
+    border-top-left-radius: 1em 1em;
+    border-top-right-radius: 1em 1em;
+    padding-right: 0px;
+}
+
+.split-button-custom span.ui-icon {
+    margin-top: 0px;
+    right: 0px;
+    top: 0px;
+    position: relative;
+}
+*/

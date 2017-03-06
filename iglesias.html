@@ -1,21 +1,38 @@
 <div id="iglesias" data-role="page" data-theme='b'>
 <div data-role="header" data-theme='b'> <!-- data-add-back-btn="true"  -->
-
-<h1>Iglesias</h1>
 <a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-l" class="ui-alt-icon ui-nodisc-icon" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
+<h1>Iglesias</h1>
+
+ <button class="cabecera_login right" onclick="logout();" data-iconpos="notext"  data-inline="true" data-icon="power" style="display:none">  </button>
 </div>
 
 <div data-role="content" class="home-content">
 
-  <ul data-role="listview" data-split-icon="custom" data-filter="true" data-filter-placeholder="Buscar Iglesias..."  data-inset="true">
+  <ul data-role="listview" data-icon="false" data-split-icon="custom" data-filter="true" data-filter-placeholder="Buscar Iglesias..."  data-inset="true">
    <!-- Iglesias de San Cristobal -->
       <li>
         <a href="descripciones/catedral-sancristobal.html">
-          <img src="imgs/th-catedral-sancristobal.jpg">
+         <img src="imgs/th_catedral_de_sancristobal1.jpg">
       <h3>Catedral de San Cristobal</h3>
       <p>San Cristobal</p></a>
-      <a href="mapa/map-iglesias.html?latitud=7.765005&longitud=-72.235351">
-      </a>
+    <!--  <a href="mapa/map-iglesias.html?latitud=7.765005&longitud=-72.235351">
+      </a>-->
+      <div class="split-custom-wrapper">
+        <!-- <a href="#" data-role="button" class="split-custom-button" data-icon="gear" data-rel="dialog" data-theme="c" data-iconpos="notext"></a> -->
+            <fieldset data-role="controlgroup" class="checkboxWidth"> 
+            <input type="checkbox" id="favorito" class="split-custom-button"  name="favorito" data-mini="true">
+            <label for="favorito">Favorito</label>
+            </fieldset>
+            
+            <a href="mapa/map-iglesias.html?latitud=7.765005&longitud=-72.235351"  data-role="button" class="split-custom-button" data-icon="custom" data-rel="dialog" data-theme="c" data-iconpos="notext"></a>           
+        </div>
+      </li>
+      
+      <li><a href="descripciones/igl-lobatera.html">
+          <img src="imgs/th-igl-de-lobatera.jpg">
+      <h3>Iglesia de Nuestra Señora del Rosario de Chiquinquirá</h3>
+      <p>Lobatera</p></a>
+      <a href="mapa/map-iglesias.html?latitud=7.930528&longitud=-72.247389"></a>
       </li>
 
       <li class="lista-iglesias" data-lat="7.767333" data-lng="-72.230222" >
@@ -100,13 +117,6 @@
       <a href="mapa/map-iglesias.html?latitud=8.145295&longitud=-72.072939"></a>
       </li>
 
-      <li><a href="descripciones/igl-lobatera.html">
-          <img src="imgs/th-igl-lobatera.jpg">
-      <h3>Iglesia de Nuestra Señora del Rosario de Chiquinquirá</h3>
-      <p>Lobatera</p></a>
-      <a href="mapa/map-iglesias.html?latitud=7.930528&longitud=-72.247389"></a>
-      </li>
-
       <li><a href="descripciones/igl-sanpedro.html">
           <img src="imgs/th-igl-sanpedrodelrio.jpg">
       <h3>Iglesia San Pedro</h3>
@@ -160,4 +170,14 @@
 <div data-role="footer" data-theme='b'>
 <h4>Visitalas</h4>
 </div>
+<script> 
+ $(document).ready(function(){   
+       //alert('epale');
+      
+     if(sessionStorage.getItem('username')){          
+         $(".oculta").hide();
+         $(".cabecera_login").show();
+     }
+    });
+</script>
 </div>

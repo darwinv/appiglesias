@@ -6,7 +6,7 @@
     <title>Iglesias en Tachira</title>
     <link rel="stylesheet" href="css/toursim.css" />
     <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
-    <link rel='stylesheet' href='css/jquery.mobile.structure-1.4.5.css' />
+    <link rel='stylesheet' href='css/jquery.mobile.structure-1.4.5.min.css' />
     <link rel="stylesheet" href="css/styles.css" />
     <script src='js/jquery.min.js'></script>
     <script src='js/jquery.mobile-1.4.5.min.js'></script>
@@ -15,16 +15,40 @@
                $.mobile.toolbar.prototype.options.addBackBtn = true;
                $.mobile.toolbar.prototype.options.backBtnText = "Volver";
            });
+        
+    $('#iglesias').on('pagebeforeshow', function() {
+         $(".cabecera_login").hide();
+         if(sessionStorage.getItem('username')){    
+                 $(".cabecera_login").show();
+             console.log('en iglesias');
+         }
+    });
+        
+    $(document).ready(function(){   
+        $(".cabecera_login").hide();
+        if(sessionStorage.getItem('username')){            
+           // document.getElementById('cabecera123').style.visibility="hidden";
+         $('#cabecera_nologin').hide();
+        // $("#cabecera_login").val(sessionStorage.getItem('name'));       
+           var nombre = sessionStorage.getItem('name')
+            console.log(nombre+'ee');
+        $("#id_cabecera_login").append('Hola! '+nombre);    
+        $(".cabecera_login").show();
+        }
+    });
        </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG8PwrVPA2llwolh7KtXPqTIwhowcJm-g">
     </script>
-
+<script src='js/database.js'></script>
   </head>
   <body>
     <!-- Main Page -->
     <div id='main' data-role='page' data-theme='b'>
             <div data-role='header' data-theme='b'>
-              <h1>Turismo Religioso</h1>
+            <a href="login.html" id="cabecera_nologin" data-icon="user" data-iconpos="notext" data-transition="fade">Logueo</a>   <button id="id_cabecera_login" class="cabecera_login"  data-inline="true" data-icon="user" style="display:none">           </button>
+                <button class="cabecera_login right" onclick="logout();" data-iconpos="notext"  data-inline="true" data-icon="power" style="display:none">            
+                </button>                
+                <h1>Turismo Religioso</h1>
             </div>
         <div id='content' data-role='content' data-theme='b' class="home-content">
 
@@ -61,11 +85,9 @@
           <ul data-role="listview" data-theme='b' data-inset="true" >
             <li> <a href="iglesias.html"> <img src="imgs/church.png" alt="Ver Lugares" class="ul-li-icon ui-corner-none">Iglesias</a> </li>
             <li> <a href="mapa/mapa-global.html"> <img src="imgs/map-icon-16.png" alt="Ver Mapa" class="ul-li-icon">Mapa</a></li>
-            <li> <a href="#"> <img src="imgs/info.png" alt="Acerca" class="ul-li-icon">Acerca de</a></li>
+            <li> <a href="acerca.html"> <img src="imgs/info.png" alt="Acerca" class="ul-li-icon">Acerca de</a></li>
+             <li class="cabecera_login"> <a href="#"> <img src="imgs/star.png" alt="Acerca" class="ul-li-icon">Favoritas</a></li>
           </ul>
-        <div data-role='footer' data-theme='b'>
-            <h4>Descubre los lugares...</h4>
-        </div>
       </div>
   </body>
 
