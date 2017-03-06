@@ -1,0 +1,44 @@
+<div id="ingresar" data-role="page" data-theme='b'>
+<div data-role="header" data-theme='b'> <!-- data-add-back-btn="true"  -->
+
+<h1>Ingresar</h1>
+<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-l" class="ui-alt-icon ui-nodisc-icon" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
+</div>
+
+<div data-role="content" class="home-content">
+
+<div style="text-align:center;">
+
+<img src="imgs/ic_launcher.png" alt="">
+
+<h3 class="titulo2"> AppEclesiasticaTachira</h3>
+
+</div>
+
+
+		
+
+    <label for="username_login">Usuario:</label>
+    <input name="username_login" id="username_login" value="" type="text">
+
+    <label for="pass_login">Contraseña:</label>
+    <input name="pass_login" id="pass_login" value="" autocomplete="off" type="password">
+    <input id='submitid' type='submit' onclick="ingresar();" value='Ingresar'/>
+    <p> ¿Sin Cuenta? <a href="registrar.html"> Registrarse aqui</a> </p>
+
+<div data-role="popup" id="wrong_passwd" data-position-to="window" data-transition="turn">
+    <p>Clave Incorrecta</p>
+</div>
+
+<div data-role="popup" id="wrong_user" data-position-to="window" data-transition="turn">
+    <p>Usuario no encontrado</p>
+</div>
+
+<div data-role="popup" id="welcome_user" data-position-to="window" data-transition="turn">
+    <p>Bienvenido: </p>
+</div>
+
+</div>
+<div data-role="footer" data-theme='b'>
+<h4>Visitalas</h4>
+</div>

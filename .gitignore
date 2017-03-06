@@ -1,0 +1,10 @@
+# Git Ignore Intel XDK
+
+### NetBeans ###
+xdk/
+*.xml
+*.xdk
+*.xdke
+xdk-publish-meta-data.json
+
+# End
