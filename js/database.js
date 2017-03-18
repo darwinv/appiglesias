@@ -144,7 +144,35 @@ function ingresar() {
       
 
 }
+ 
 
+$(document).on("pagecreate", "#favoritas", function () {
+
+var idUser = sessionStorage.getItem('id_user');
+  var active = database.result;
+    var data = active.transaction(["favoritos"], "readonly");
+    var object = data.objectStore("favoritos");
+    var index = object.index('by_id_user');    
+    var request = index.openCursor(String(idUser));
+        
+    
+    request.onsuccess = function(event){       
+         var cursor = request.result;
+    if(cursor){
+        console.log('si hay cursor, iduser: '+idUser);
+      //  console.log(cursor.value.iglesia);
+        $('#favs').append('<li> <h3> '+ cursor.value.iglesia+ '</h3> <p> '+ cursor.value.lugar +' </p> </li>');
+        $('#favs').listview('refresh');
+         //elements.push(cursor.value.id_iglesia);
+         cursor.continue();
+        }
+    };   
+    
+   
+    
+   
+});
+ 
 $(document).on("pageinit", "#iglesias", function () {
 
     if (sessionStorage.getItem('username')) {       
@@ -152,25 +180,33 @@ $(document).on("pageinit", "#iglesias", function () {
     }
     
     $(".favorito").change(function () {
-        var idIglesia = $(this).data("id");
+        var nombre = $(this).closest('li').find('h3').text();
+       var lugar = $(this).closest('li').find('p').text();
+        
+       // console.log($(this).parent('h3').text());
+    var idIglesia = $(this).data("id");
         var idUser = sessionStorage.getItem('id_user');
         if ($(this).is(':checked')) {
-            
-            agregarFavorito(idIglesia, idUser);               
+        
+            agregarFavorito(idIglesia, idUser, nombre, lugar);               
         } else { eliminarFavorito(idIglesia, idUser);
             }
     });
 });
 
-//Agregar a Favorito
-function agregarFavorito(idIglesia, idUser) {
+
+
+// ---  Agregar a Favorito --- // 
+function agregarFavorito(idIglesia, idUser, nombre, lugar) {
     var active = database.result;
     var data = active.transaction(["favoritos"], "readwrite");
     var object = data.objectStore("favoritos");
     
     var request = object.put({
                     id_iglesia: idIglesia,
-                    id_user: idUser                   
+                    id_user: idUser,
+                    iglesia: nombre,
+                    lugar: lugar
                 });
     
     request.onerror = function (e) {
@@ -253,8 +289,7 @@ function habilitarChecks(){
     console.log(favoritos);
     for(var i=0;i<favoritos.length;i++) {
         
-      if(!$("#fav"+favoritos[i]).is(':checked')){
-          console.log($("#fav"+favoritos[i]));        
+      if(!$("#fav"+favoritos[i]).is(':checked')){               
           $("#fav"+favoritos[i]).attr('checked', true).checkboxradio('refresh');
          
       }  
