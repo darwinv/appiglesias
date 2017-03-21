@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
     <link rel='stylesheet' href='css/jquery.mobile.structure-1.4.5.min.css' />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/all-animation.css" />
     <script src='js/jquery.min.js'></script>
     <script src='js/jquery.mobile-1.4.5.min.js'></script>
     <script>
@@ -25,6 +26,7 @@
     });
         
     $(document).ready(function(){   
+        reloj();
         $(".cabecera_login").hide();
         if(sessionStorage.getItem('username')){            
            // document.getElementById('cabecera123').style.visibility="hidden";
@@ -40,6 +42,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG8PwrVPA2llwolh7KtXPqTIwhowcJm-g">
     </script>
 <script src='js/database.js'></script>
+ <script src='js/reloj.js'></script>
   </head>
   <body>
     <!-- Main Page -->
@@ -48,19 +51,20 @@
             <a href="login.html" id="cabecera_nologin" data-icon="user" data-iconpos="notext" data-transition="fade">Logueo</a>   <button id="id_cabecera_login" class="cabecera_login"  data-inline="true" data-icon="user" style="display:none">           </button>
                 <button class="cabecera_login right" onclick="logout();" data-iconpos="notext"  data-inline="true" data-icon="power" style="display:none">            
                 </button>                
-                <h1>Turismo Religioso</h1>
+                <h1>Turismo Religioso</h1>                
+                <span id="liveclock"></span>                
             </div>
         <div id='content' data-role='content' data-theme='b' class="home-content">
 
 
           <div class="ui-grid-a">
               <div class="ui-block-a" align="center">
-              <div class="polaroid incli-izq"><img src="imgs/igl-basilicatariba.jpg"  alt="Tariba">
+              <div class="polaroid incli-izq dance"><img src="imgs/igl-basilicatariba.jpg"  alt="Tariba">
                 <p>Basílica de Táriba</p>
               </div>
               </div>
               <div class="ui-block-b" align="center">
-              <div class="polaroid incli-der">
+              <div class="polaroid incli-der dance">
                 <img src="imgs/igl-elangel.jpg" alt="El Angel">
                  <p>Iglesia el Ángel</p>
               </div>
@@ -69,12 +73,12 @@
 <h3 class="titulo">Iglesias en Táchira</h3>
           <div class="ui-grid-a">
               <div class="ui-block-a" align="center">
-              <div class="polaroid incli-der"> <img src="imgs/igl-elcobre.jpg"  alt="">
+              <div class="polaroid incli-der dance"> <img src="imgs/igl-elcobre.jpg"  alt="">
                 <p>San Bartolomé de Vargas</p>
                </div>
               </div>
               <div class="ui-block-b" align="center">
-              <div class="polaroid">
+              <div class="polaroid dance">
                 <img src="imgs/igl-rubio2.jpg" alt="">
                 <p>Santa Bárbara</p>
               </div>
@@ -88,7 +92,26 @@
             <li> <a href="acerca.html"> <img src="imgs/info.png" alt="Acerca" class="ul-li-icon">Acerca de</a></li>
              <li class="cabecera_login"> <a href="favoritas.html"> <img src="imgs/star.png" alt="Acerca" class="ul-li-icon">Favoritas</a></li>
           </ul>
-      </div>
-  </body>
+    
+    <div class="padre">
+      <div class="hijo">
+                 <a href="http://facebook.com/abletroner" target="_blank">   
+                  <img src="imgs/facebook.png" width="40" height="40"/>
+                </a>
+        </div>
+      <div class="hijo">
+                 <a href="http://facebook.com/abletroner" target="_blank">   
+                  <img src="imgs/instagram.png" width="40" height="40"/>
+                </a>
+        </div>
+      <div class="hijo">
+                 <a href="http://facebook.com/abletroner" target="_blank">   
+                  <img src="imgs/twitter.png" width="40" height="40" />
+                </a>
+            </div>
+    </div>      
+          
+</div>
+</body>
 
 </html>
