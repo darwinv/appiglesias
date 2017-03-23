@@ -8,6 +8,10 @@ h3.titulo2{
   text-align: center;
 }
 
+.center{
+    text-align: center;
+}
+
 h1{
   font-size: 23px !important;
 font-style: initial;
@@ -149,3 +153,11 @@ div.description{
   /* IMPORTANTE */
   display: inline-block;
 }
+
+.split-button-custom span.ui-icon {
+    margin-top: 0px;
+    right: 0px;
+    top: 0px;
+    position: relative;
+}
+*/
