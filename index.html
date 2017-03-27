@@ -9,9 +9,17 @@
     <link rel='stylesheet' href='css/jquery.mobile.structure-1.4.5.min.css' />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/all-animation.css" />
+    <link rel="stylesheet" href="css/swipebox.min.css">
     <script src='js/jquery.min.js'></script>
     <script src='js/jquery.mobile-1.4.5.min.js'></script>
+     <script src='js/jquery.swipebox.min.js'></script>
     <script>
+        
+        ;( function( $ ) {
+	       $( '.swipebox' ).swipebox();
+        } )( jQuery );
+        
+        
            $(document).on("mobileinit", function() {
                $.mobile.toolbar.prototype.options.addBackBtn = true;
                $.mobile.toolbar.prototype.options.backBtnText = "Volver";
@@ -24,6 +32,8 @@
              console.log('en iglesias');
          }
     });
+
+
         
     $(document).ready(function(){   
         reloj();
@@ -95,17 +105,17 @@
     
     <div class="padre">
       <div class="hijo">
-                 <a href="http://facebook.com/abletroner" target="_blank">   
+                 <a href="https://www.facebook.com/RutaReligiosaTachira/" target="_blank">   
                   <img src="imgs/facebook.png" width="40" height="40"/>
                 </a>
         </div>
       <div class="hijo">
-                 <a href="http://facebook.com/abletroner" target="_blank">   
+                 <a href="https://www.instagram.com/rutareligiosasc/" target="_blank">   
                   <img src="imgs/instagram.png" width="40" height="40"/>
                 </a>
         </div>
       <div class="hijo">
-                 <a href="http://facebook.com/abletroner" target="_blank">   
+                 <a href="https://twitter.com/RutaReligiosaSc" target="_blank">   
                   <img src="imgs/twitter.png" width="40" height="40" />
                 </a>
             </div>
