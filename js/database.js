@@ -4,6 +4,7 @@ var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedD
 
 
 
+
 var database = indexedDB.open("iglesiasdb", 1);// abrimos la bd
         
 database.onupgradeneeded = function (e) { //Se crea la bd si no existe
